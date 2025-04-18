@@ -4,7 +4,7 @@ This repository contains the simulation code and documentation for the MSc thesi
 
 📘 **"A multiscale computational model of Deep Brain Stimulation of the Anterior Nucleus of the Thalamus for epilepsy treatment"**  
 🎓 Author: Lorenzo Prione (University of Genoa, University of Twente)  
-🧠 Supervisor: Dr. M. C. Piastra | Co-supervisor: Prof. S. Martinoia
+🧠 Advisor: Dr. rer. nat. M. C. Piastra | Advisor: Prof. S. Martinoia | Co-advisor: N. V. Chaplinskaia
 
 ---
 
@@ -68,7 +68,7 @@ python src/simulate_dbs.py
 
 ## 📄 Thesis
 
-🧾 You can find the final MSc thesis [here (link)](https://...) *(to be updated once available)*
+🧾 [Download thesis (PDF)](./thesis_prione_2025.pdf)
 
 ---
 
@@ -76,7 +76,7 @@ python src/simulate_dbs.py
 
 **Lorenzo Prione**  
 lorenzoprione@gmail.com  
-[LinkedIn](https://www.linkedin.com/in/lorenzoprione) | [GitHub](https://github.com/lorenzoprione)
+[LinkedIn](https://www.linkedin.com/in/lorenzoprione) | [GitHub](https://github.com/Prions)
 
 ---
 
