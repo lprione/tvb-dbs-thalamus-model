@@ -1,7 +1,7 @@
 
-# TVB-DBS-Thalamus-Model – Source Code Overview
+# TVB DBS Model – Source Code Overview
 
-This folder contains core MATLAB scripts used for analyzing and visualizing simulation results from the TVB-based DBS thalamic model. It includes both EEG analysis tools and 3D brain model visualization.
+This folder contains core scripts used for analyzing and visualizing simulation results from the TVB-based DBS thalamic model. It includes both EEG analysis tools and 3D brain model visualization.
 
 ---
 
