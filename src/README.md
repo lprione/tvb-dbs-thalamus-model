@@ -22,6 +22,7 @@ This folder contains core scripts used for analyzing and visualizing simulation 
 - [FieldTrip Toolbox](https://www.fieldtriptoolbox.org/)  
 - EEG simulation output from your TVB/DBS model  
 
+> 💡 A similar analysis was performed on real EEG data using a private version of the pipeline adapted from `analyze_simulated_eeg.m`. Due to ownership and collaboration considerations, that code is not publicly available.
 ---
 
 ## 🧠 TVB Head Model Visualization
