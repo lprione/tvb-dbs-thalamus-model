@@ -1,85 +1,77 @@
-# Multiscale DBS Model – ANT Thalamus
 
-This repository contains the simulation code and documentation for the MSc thesis:
+# TVB-DBS-Thalamus-Model
 
-📘 **"A multiscale computational model of Deep Brain Stimulation of the Anterior Nucleus of the Thalamus for epilepsy treatment"**  
-🎓 Author: Lorenzo Prione (University of Genoa, University of Twente)  
-🧠 Advisor: Dr. rer. nat. M. C. Piastra | Advisor: Prof. S. Martinoia | Co-advisor: N. V. Chaplinskaia
+This repository contains scripts and data to simulate and analyze Deep Brain Stimulation (DBS) effects using The Virtual Brain (TVB) platform with a custom thalamic model.
 
 ---
 
-## 🔬 Background
+## 🧪 EEG Analysis (FieldTrip)
 
-Epilepsy affects over 50 million people worldwide, with ~30% resistant to pharmacological treatment. Deep Brain Stimulation (DBS) of the Anterior Nucleus of the Thalamus (ANT) has proven clinically effective, though its mechanisms are not fully understood.
+`analyze_simulated_eeg.m` provides an end-to-end analysis pipeline of simulated EEG from DBS models using [FieldTrip](https://www.fieldtriptoolbox.org/). It includes:
 
-This project explores the neurophysiological effects of ANT-DBS using **The Virtual Brain (TVB)** and a **neural mass model (Jansen-Rit)**, bridging biophysical modeling and EEG data comparison.
-
----
-
-## 🛠️ Tools & Technologies
-
-- 🐍 Python (3.x)
-- 📦 The Virtual Brain (TVB)
-- 📊 MATLAB (GMFP, signal processing)
-- 🧠 EEG real data (synthetic example provided)
-- 💻 Linux/Windows + Jupyter Notebooks
+- Artifact rejection  
+- Epoching around stimulation events  
+- ERP and GMFP computation  
+- Topographical plotting
 
 ---
 
-## 📁 Repository Structure
+## 🧠 TVB Head Model Visualization
 
-```text
+`plot_tvb_headmodel.m` provides a 3D visualization of a head model based on structural data from *The Virtual Brain* (TVB). It includes:
+
+- Loading of cortical and scalp surface meshes  
+- 3D rendering of the head model  
+- Plotting of cortical region centers (nodes), with selected nodes (e.g., amygdala) highlighted  
+- Optional saving of the resulting figure  
+
+### 📁 Required files
+
+- `cortex/vertices.txt`, `cortex/triangles.txt`  
+- `face/vertices.txt`, `face/triangles.txt`  
+- `centers.txt` containing XYZ coordinates of brain region centers  
+
+### 📦 Data origin
+
+All `.txt` files were generated using the TVB software with a connectivity matrix of **76 brain regions**.
+
+### 📸 Output
+
+- A 3D figure of the head model with both surfaces and region centers
+
+### 💡 Note
+
+Highlighted nodes can be customized in the script by modifying the `highlight_nodes` array.
+
+### 🖼 Example Output
+
+<img src="figures/tvb_headmodel_3D.png" width="600"/>
+
+---
+
+## 📂 Project Structure
+
+```
 tvb-dbs-thalamus-model/
-├── src/           # Simulation and analysis scripts
-├── notebooks/     # Interactive exploration and plotting
-├── data/          # Example/mock datasets
-├── requirements.txt
-├── LICENSE
-└── README.md
+├── cortex/
+├── face/
+├── scripts/
+├── tvb_model_thalamus/
+├── figures/
+├── README.md
+└── ...
 ```
 
 ---
 
-## 🚀 How to Run
+## 🔧 Requirements
 
-> ⚠️ Currently under setup – check back soon for full documentation.
-
-To install dependencies (after setting up your Python environment):
-```bash
-pip install -r requirements.txt
-```
-
-To run a simulation:
-```bash
-python src/simulate_dbs.py
-```
+- MATLAB with 3D plotting enabled
+- FieldTrip (for EEG analysis)
+- TVB (to generate structural data)
 
 ---
 
-## 📊 Example Output
+## 📬 Contact
 
-- Simulated EEG time series
-- Global Mean Field Power (GMFP) plots
-- Topographic brain activity maps
-
-![placeholder image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Brain_activity_topography_example.svg/640px-Brain_activity_topography_example.svg.png)
-
----
-
-## 📄 Thesis
-
-🧾 [Download thesis (PDF)](./thesis_prione_2025.pdf)
-
----
-
-## 👨‍💻 Author
-
-**Lorenzo Prione**  
-lorenzoprione@gmail.com  
-[LinkedIn](https://www.linkedin.com/in/lorenzoprione) | [GitHub](https://github.com/Prions)
-
----
-
-## 📜 License
-
-MIT License – see `LICENSE` file for details.
+For questions or collaborations, feel free to open an issue or contact [Lorenzo Prione](https://github.com/Prions).
