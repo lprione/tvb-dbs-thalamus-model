@@ -23,6 +23,7 @@ This folder contains core scripts used for analyzing and visualizing simulation 
 - EEG simulation output from your TVB/DBS model  
 
 > 💡 A similar analysis was performed on real EEG data using a private version of the pipeline adapted from `analyze_simulated_eeg.m`. Due to ownership and collaboration considerations, that code is not publicly available.
+
 ---
 
 ## 🧠 TVB Head Model Visualization
@@ -69,4 +70,53 @@ Ensure input files are located in their expected folders.
 
 ---
 
-Developed by Lorenzo Prione.
+## ⚡ DBS_func – Custom Temporal Stimulation for TVB
+
+`dbs_func.py` is a fully custom stimulation pattern class designed to work with The Virtual Brain (TVB) simulator. It models a biphasic pulse train followed by an exponential decay, providing a biologically inspired stimulation pattern for Deep Brain Stimulation (DBS) modeling studies.
+
+### 🧠 Overview
+
+The function extends TVB’s `TemporalApplicableEquation` interface and can be used as a temporal input for `StimuliRegion` objects in simulations. It supports configuration of pulse width, repetition frequency, onset time, and an optional exponential decay component.
+
+---
+
+### 🚀 Example Usage
+
+```python
+from src.dbs_func import DBS_func
+import tvb.simulator.lab as tsl
+import numpy as np
+
+# Instantiate DBS temporal function
+eqn_t = DBS_func()
+
+# Create stimulation pattern
+stimulus = tsl.patterns.StimuliRegion(
+    temporal=eqn_t,
+    connectivity=conn1,
+    weight=stim_weights
+)
+
+# Configure the stimulus in time and space
+stimulus.configure_space()
+stimulus.configure_time(np.arange(498.75, 505.75, 0.001))
+
+# Visualize the stimulation
+tsl.plot_pattern(stimulus)
+```
+
+---
+
+### 🧪 Applications
+
+- Simulating realistic DBS input in brain network models  
+- Comparing effects of stimulation frequencies, amplitudes, and pulse shapes  
+- Investigating region-specific response to stimulation  
+
+---
+
+### 📌 Notes
+
+- Can be combined with `StimuliRegion` weights to target specific regions.  
+- Fully compatible with TVB models and simulation pipelines.  
+- Developed by **Lorenzo Prione**.
