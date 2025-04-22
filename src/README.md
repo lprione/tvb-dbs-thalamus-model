@@ -21,6 +21,11 @@ This repository contains core scripts for analyzing and visualizing simulation r
   - [🚀 Example Usage](#-example-usage)
   - [🧪 Applications](#-applications)
   - [📌 Notes](#-notes-2)
+- [🔬 Sensitivity Analysis](#-sensitivity-analysis)
+  - [📋 Features](#-features-2)
+  - [🛠 Requirements](#-requirements-2)
+  - [📂 Available Files](#-available-files)
+  - [📌 Notes](#-notes-3)
 
 ---
 
@@ -134,3 +139,35 @@ tsl.plot_pattern(stimulus)
 - Developed by **Lorenzo Prione**.
 
 ---
+
+## 🔬 **Sensitivity Analysis**
+
+This section provides a sensitivity analysis workflow for the TVB-DBS model parameters using **Simulation-Based Inference (SBI)** and **Active Subspaces**.
+
+### 📋 **Features**
+
+- Defines priors over model parameters [A, B, a, b]  
+- Performs **posterior inference** via **Sequential Neural Posterior Estimation (SNPE)**  
+- Generates **posterior samples** and visualizes them with a **pairplot**  
+- Computes **Active Subspace directions** for sensitivity analysis  
+
+### 🛠 **Requirements**
+
+- Python (3.8+)  
+- Libraries: `sbi`, `torch`, `matplotlib`
+
+### 📂 **Available Files**
+
+- **Python script**:  
+  `src/Sensitivity_Analysis.py` — self-contained code with explanatory comments.
+
+- **Interactive Jupyter notebook**:  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prions/tvb-dbs-thalamus-model/blob/main/src/Sensitivity%20Analysis.ipynb)
+
+The notebook version includes outputs and can be run directly on **Google Colab** without local setup.
+
+### 📌 **Notes**
+
+- The script uses a custom **simulation wrapper function** (`simulation_wrapper_func`) to generate simulated data from the TVB-DBS model.  
+- The parameter ranges correspond to biophysical parameters of the **Jansen-Rit neural mass model**.
+
