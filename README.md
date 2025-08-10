@@ -20,9 +20,9 @@ This project explores the neurophysiological effects of ANT-DBS using **The Virt
 
 - 🐍 Python (3.x)
 - 📦 The Virtual Brain (TVB)
-- 📊 MATLAB (GMFP, signal processing)
+- 📊 MATLAB (FieldTrip toolbox)
 - 🧠 EEG real data (synthetic example provided)
-- 💻 Linux/Windows + Jupyter Notebooks
+- 💻 Linux/Windows + Jupyter Notebook
 
 ---
 
