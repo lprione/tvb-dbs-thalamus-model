@@ -161,7 +161,7 @@ This section provides a sensitivity analysis workflow for the TVB-DBS model para
 - **Python script**:  
   `src/Sensitivity_Analysis.py` — self-contained code with explanatory comments.
 
-- **Interactive Jupyter notebook**:  
+- **Interactive Jupyter notebook** (currently WORK IN PROGRESS):  
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Prions/tvb-dbs-thalamus-model/blob/main/src/Sensitivity%20Analysis.ipynb)
 
 The notebook version includes outputs and can be run directly on **Google Colab** without local setup.
