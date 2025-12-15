@@ -1,2 +1,6 @@
-# Requirements for TVB DBS simulation
-numpy\nmatplotlib\ntvb
+numpy
+scipy
+matplotlib
+pandas
+tvb-library
+environment.yml
