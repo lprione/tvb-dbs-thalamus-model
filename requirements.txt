@@ -3,4 +3,3 @@ scipy
 matplotlib
 pandas
 tvb-library
-environment.yml
